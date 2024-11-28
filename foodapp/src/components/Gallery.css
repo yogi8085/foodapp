@@ -1,0 +1,109 @@
+/* Food Gallery Container */
+.gallery-container {
+    padding: 50px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Heading of the Gallery */
+.gallery-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout for the Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Food Card Styling */
+.food-card {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.food-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.food-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.food-card:hover .food-image {
+    opacity: 0.7;
+}
+
+/* Overlay Effect */
+.food-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.food-card:hover .food-overlay {
+    opacity: 1;
+}
+
+/* Title Inside the Overlay */
+.food-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .gallery-heading {
+        font-size: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Reduces card width on smaller screens */
+    }
+
+    .food-card {
+        max-width: 100%;
+    }
+
+    .food-title {
+        font-size: 1.3rem; /* Adjusts title size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-heading {
+        font-size: 1.8rem; /* Reduces heading size further on very small screens */
+    }
+
+    .food-title {
+        font-size: 1.2rem; /* Reduces title size for mobile */
+    }
+}

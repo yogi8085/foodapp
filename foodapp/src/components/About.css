@@ -1,0 +1,62 @@
+/* About Page Container */
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  gap: 30px;
+  background-color: #fafafa;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* About Content Styling */
+.about-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-text:last-child {
+  margin-bottom: 0;
+}
+
+/* About Image Styling */
+.about-image {
+  flex: 1;
+  max-width: 600px;
+  text-align: center;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .about-content {
+    margin-bottom: 30px;
+  }
+}
